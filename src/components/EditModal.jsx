@@ -28,15 +28,15 @@ export default function EditModal(props) {
     if (!formData?.name) {
       errorFields.name = true;
     }
-    if (!formData.email) {
+    if (!formData?.email) {
       errorFields.email = "Email is required";
-    } else if (!emailRegex.test(formData.email)) {
+    } else if (!emailRegex.test(formData?.email)) {
       errorFields.email = "Invaid Email";
     }
-    if (!formData.phone) {
+    if (!formData?.phone) {
       errorFields.phone = "Phone number is required";
     }
-    if (!formData.website) {
+    if (!formData?.website) {
       errorFields.website = true;
     }
     if (Object.keys(errorFields).length === 0) {
@@ -142,7 +142,7 @@ export default function EditModal(props) {
                       onChange={handleChange}
                       onBlur={validateFormItem}
                     />
-                    {errors.email && <p className="error">{errors.email}</p>}
+                    {errors?.email && <p className="error">{errors?.email}</p>}
                   </div>
                 </div>
                 <div className="form-item">
@@ -155,7 +155,7 @@ export default function EditModal(props) {
                       onChange={handleChange}
                       onBlur={validateFormItem}
                     />
-                    {errors.phone && <p className="error">{errors.phone}</p>}
+                    {errors?.phone && <p className="error">{errors?.phone}</p>}
                   </div>
                 </div>
                 <div className="form-item">
@@ -168,7 +168,7 @@ export default function EditModal(props) {
                       onChange={handleChange}
                       onBlur={validateFormItem}
                     />
-                    {errors.website && (
+                    {errors?.website && (
                       <p className="error">Website is required</p>
                     )}
                   </div>

@@ -13,7 +13,7 @@ const Header = () => {
           <li>
             <Link to="/dashboard">Contact Us</Link>
           </li>
-          <li>
+          <li className={'logout'}>
             <Link to="/">Logout</Link>
           </li>
         </ul>
